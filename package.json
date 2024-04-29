@@ -1,0 +1,21 @@
+{
+  "name": "responsive-gym-website-main",
+  "version": "1.0.0",
+  "description": "- Responsive Gym Website Design Using HTML CSS & JavaScript - Contains animations when scrolling. - Includes a form to calculate body mass index. - Includes a form to send emails. - Developed first with the Mobile First methodology, then for desktop. - Compatible with all mobile devices and with a beautiful and pleasant user interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2",
+    "nodemon": "^3.1.0",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {}
+}

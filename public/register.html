@@ -1,0 +1,139 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="./register.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="register-content">
+            <form id="register-form" action="./login.html" method="post" onsubmit="return validateForm()">
+                <h2 class="title">Register</h2>
+
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="ri-map-pin-user-fill"></i>
+                    </div>
+                    <div class="div">
+                        <h5>First Name</h5>
+                        <input type="text" class="input" id="first-name" name="first_name" required>
+                    </div>
+                </div>
+
+                <div class="input-div email-input">
+                    <div class="i">
+                        <i class="ri-mail-fill"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Email Address</h5>
+                        <input type="email" class="input" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="ri-lock-password-fill"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        <input type="password" class="input" id="password" name="password" required>
+                        <i class="ri-eye-fill" id="togglePassword"></i>
+                    </div>
+                </div>
+
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="ri-lock-password-fill"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Confirm Password</h5>
+                        <input type="password" class="input" id="confirm-password" name="confirm_password" required>
+                    </div>
+                </div>
+
+                <div class="input-div">
+                    <div class="i">
+                        <i class="ri-phone-fill"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Phone Number</h5>
+                        <input type="tel" class="input" id="phone" name="phone" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+
+                <div class="input-div">
+                    <div class="i">
+                        <i class="ri-alarm-fill"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Choose Timing</h5>
+                        <select class="input" id="timing" name="timing" required>
+                            <option value="" disabled selected>Select Timing</option>
+                            <option value="5-7">5:00 AM - 7:00 AM</option>
+                            <option value="7-9">7:00 AM - 9:00 AM</option>
+                            <option value="9-11">9:00 AM - 11:00 AM</option>
+                            <option value="11-13">11:00 AM - 1:00 PM</option>
+                            <option value="13-15">1:00 PM - 3:00 PM</option>
+                            <option value="15-17">3:00 PM - 5:00 PM</option>
+                            <option value="17-19">5:00 PM - 7:00 PM</option>
+                            <option value="19-21">7:00 PM - 9:00 PM</option>
+                            <option value="21-23">9:00 PM - 11:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-div">
+                    <div class="i">
+                        <i class="ri-credit-card-fill"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Choose Payment Method</h5>
+                        <select class="input" id="payment-method" name="payment_method" required>
+                            <option value="" disabled selected>Select Payment Method</option>
+                            <option value="card">Credit/Debit Card</option>
+                            <option value="upi">UPI</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="upi-info" style="display:none;">
+                    <p>Scan the following QR code or make payment to this UPI ID:</p>
+                    <img src="./img/upi.jpg" alt="UPI Barcode" width="200px">
+                    <p>6204082367@paytm</p>
+                </div>
+
+                <!-- <div id="thank-you-message" style="display:none;">
+                    <h2>Thanks for joining!</h2>
+                    <p>You're now a member of our gym. Get ready to achieve your fitness goals!</p>
+                </div> -->
+
+                <div class="check">
+                    <input type="checkbox" class="input" id="agree" required>
+                    <label for="agree">By creating an account you agree to our <a href="terms_policy.html">Terms & Privacy</a></label>
+                </div>
+                <input type="submit" class="btn" id="confirm-payment" value="Register">
+            </form>
+            <p>Already registered? <a href="./login.html">Login</a></p> <!-- Login link -->
+        </div>
+    </div>3
+    <script type="text/javascript" src="./register.js"></script>
+    <script>
+        const passwordField = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("click", function () {
+            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", type);
+            this.classList.toggle("ri-eye-fill");
+            this.classList.toggle("ri-eye-off-fill");
+        });
+    </script>
+</body>
+</html>
+¯
